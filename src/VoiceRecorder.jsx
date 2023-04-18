@@ -29,12 +29,27 @@ function VoiceRecorder() {
         }, 5000); // Stop recording after 5 seconds
       });
   }
-
+  /*
   const handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(`Form submitted with audio input: ${formValue}`);
   }
-
+  */
+  
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append('audio', audioURL);
+    formData.append('name', formValue);
+    fetch('http://127.0.0.1:5000/voice', {
+      method: 'POST',
+      body: formData
+    }).then(response => response.json())
+      .then(data => {
+        console.log(data);
+      });
+  }
+  
   const handleFormChange = (event) => {
     setFormValue(event.target.value);
   }

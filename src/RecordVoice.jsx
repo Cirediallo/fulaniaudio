@@ -7,3 +7,4 @@ const RecordVoice = () => {
 }
 
 export default RecordVoice;
+
