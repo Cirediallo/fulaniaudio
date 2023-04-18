@@ -1,0 +1,16 @@
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f5f5f5;
+    border: 1px solid #000;
+}
+#record{
+    outline: 1px solid red;
+}
+.submit_form{
+    margin-top: 10px;
+}
